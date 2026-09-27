@@ -1,0 +1,63 @@
+Terminales = { BOOL FUNC GET IF INT RET LET PUT STR VOID WHILE ENT CAD ID SUMAIG IG COMA PYC APAR CPAR ACOR CCOR SU NOT DI EOF }
+NoTerminales = { A B C D D1 D2 E E1 F G H H1 H2 I J K K1 K2 L L1 X }
+Axioma = A
+Producciones = {
+A -> LET ID B PYC A
+A -> PUT C PYC A
+A -> GET ID PYC A
+A -> IF APAR D CPAR E PYC A
+A -> WHILE APAR D CPAR ACOR F CCOR A
+A -> FUNC ID G APAR H CPAR ACOR F CCOR A
+A -> ID I PYC A
+A -> EOF
+B -> STR
+B -> INT 
+B -> BOOL
+C -> X 
+C -> CAD 
+D -> ID D2
+D -> NOT D1
+D1 -> ID
+D1 -> APAR ID D2 CPAR
+D2 -> DI X
+D2 -> lambda
+E -> ID I 
+E -> PUT C 
+E -> GET ID 
+E -> RET E1
+E1 -> CAD 
+E1 -> X J
+F -> E PYC F
+F -> lambda
+G -> INT 
+G -> BOOL 
+G -> STR 
+G -> VOID 
+H -> VOID
+H -> INT ID H1 
+H -> BOOL ID H1 
+H -> STR ID H1 
+H1 -> COMA H2 H1
+H1 -> lambda
+H2 -> INT ID
+H2 -> BOOL ID
+H2 -> STR ID
+I -> APAR K CPAR
+I -> L
+I -> SUMAIG X
+J -> SU X J
+J -> lambda
+K -> lambda
+K -> CAD K1  
+K -> X J K1 
+K1 -> COMA K2 K1
+K1 -> lambda
+K2 -> CAD 
+K2 -> X J
+L -> IG L1
+L -> lambda
+L1 -> CAD
+L1 -> X J
+X -> ID
+X -> ENT
+	}

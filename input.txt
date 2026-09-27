@@ -1,0 +1,23 @@
+let a int;
+let c int;
+a = 0;
+c = 5;
+put a;
+put c;
+while (a != c)
+{
+/* primer bucle */
+	while (c != 7)
+	{
+	/* segundo bucle */
+		let b int;
+		get b;
+		if (b != c) b = b + 1;
+		c = c + 1;
+	}
+	c = 5;
+	a = a + 1;
+}
+put a;
+put b;
+put c;

@@ -1,0 +1,15 @@
+TABLA PRINCIPAL #1:
+
+* 'a'
+ + tipo: 'ent'
+ + desp: 0
+
+* 'b'
+ + tipo: 'ent'
+ + desp: 2
+
+* 'c'
+ + tipo: 'ent'
+ + desp: 1
+
+--------------------------------
